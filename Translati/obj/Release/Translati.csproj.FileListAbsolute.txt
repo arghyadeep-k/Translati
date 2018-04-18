@@ -94,3 +94,4 @@ F:\CodingExplorations\Alexa\Translati\Translati\obj\Release\Translati.csproj.Cor
 F:\CodingExplorations\Alexa\Translati\Translati\obj\Release\Translati.csproj.CopyComplete
 F:\CodingExplorations\Alexa\Translati\Translati\obj\Release\Translati.dll
 F:\CodingExplorations\Alexa\Translati\Translati\obj\Release\Translati.pdb
+F:\CodingExplorations\Alexa\Translati\Translati\obj\Release\Translati.csprojResolveAssemblyReference.cache

@@ -116,21 +116,14 @@ namespace Translati
                 public string Name { get; set; }
 
                 [JsonProperty("slots")]
-                public SlotAttributes Slots { get; set; }
-                
-                //public string GetSlot()
-                //{
-                //    //foreach (var slot in Slots)
-                //    return Slots.First.value.ToString();
-                //}
+                public SlotAttributes Slots { get; set; }                                
             }
 
             [JsonObject("slots")]
             public class SlotAttributes
             {
                 [JsonProperty("phrase")]
-                public PhraseAttributes Phrase { get; set; }
-                
+                public PhraseAttributes Phrase { get; set; }                
             }
 
             [JsonObject("phrase")]
