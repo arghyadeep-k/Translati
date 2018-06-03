@@ -10,7 +10,7 @@ namespace Translati.Controllers
 {
     public class AlexaController : ApiController
     {
-        [HttpPost, Route("api/translati/demo")]
+        [HttpPost, Route("api/translati")]
         public dynamic Translator(AlexaRequest request)
         {
             AlexaResponse response = null;
@@ -49,7 +49,7 @@ namespace Translati.Controllers
             {
                 case "Translati":
                 case "translati":
-                    response = Translate(request.Request.Intent.Slots.Phrase.Value.ToString()); 
+                    response = Translate(request.Request.Intent.Slots.Phrase.Value.ToString(), request.Request.Intent.Slots.Language.Value.ToString()); 
                     break;                
                 case "AMAZON.CancelIntent":
                 case "AMAZON.StopIntent":
@@ -75,11 +75,11 @@ namespace Translati.Controllers
             return new AlexaResponse("Thanks for using Translati. Have a nice day.", true);
         }
         
-        private AlexaResponse Translate(string request)
+        private AlexaResponse Translate(string request, string language)
         {            
             string result = null;
             var obj = new Translator();
-            result = obj.TranslateText(request);
+            result = obj.TranslateText(request, language);
                         
             if (result.Equals("") || result.Equals(null))
                 result = "Sorry, Translati failed to translate right now.";

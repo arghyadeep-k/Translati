@@ -123,11 +123,25 @@ namespace Translati
             public class SlotAttributes
             {
                 [JsonProperty("phrase")]
-                public PhraseAttributes Phrase { get; set; }                
+                public PhraseAttributes Phrase { get; set; }
+
+                [JsonProperty("language")]
+                public LangAttributes Language { get; set; }
+
             }
 
             [JsonObject("phrase")]
             public class PhraseAttributes
+            {
+                [JsonProperty("name")]
+                public string Name { get; set; }
+
+                [JsonProperty("value")]
+                public string Value { get; set; }
+            }
+
+            [JsonObject("language")]
+            public class LangAttributes
             {
                 [JsonProperty("name")]
                 public string Name { get; set; }
